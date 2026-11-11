@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you reference this pharmacoeconomic dataset in research, journalism, or policy analysis, please cite it using the metadata below."
+title: "US 50-State + DC Telehealth Modality, Medicaid GLP-1 Coverage & Local Clinic Cost Matrix (2026)"
+type: dataset
+version: "1.0.0"
+date-released: "2026-11-11"
+doi: "10.5281/zenodo.24139340"
+url: "https://losingweightrx.com/datasets/us-50-state-telehealth-glp1-access-medicaid-matrix-2026/"
+repository-code: "https://github.com/losingweightrx-research/us-50-state-telehealth-glp1-access-medicaid-matrix-2026"
+license: CC-BY-4.0
+authors:
+  - name: "Losing Weight RX Pharmacoeconomics & Consumer Audit Desk"
+    website: "https://losingweightrx.com/editorial-standards"
+keywords:
+  - pharmacoeconomics
+  - telehealth
+  - glp-1
+  - healthcare-pricing
+  - prior-authorization

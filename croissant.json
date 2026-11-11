@@ -1,0 +1,388 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "dct": "http://purl.org/dc/terms/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "recordSet": "cr:recordSet",
+    "source": "cr:source",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://losingweightrx.com/datasets/us-50-state-telehealth-glp1-access-medicaid-matrix-2026/",
+  "name": "US 50-State + DC Telehealth Modality, Medicaid GLP-1 Coverage & Local Clinic Cost Matrix (2026)",
+  "description": "51-jurisdiction US regulatory and geographic price-disparity matrix (50 states plus Washington, DC) indexing state telehealth modality rules (asynchronous vs synchronous video), Medicaid adult obesity GLP-1 coverage, state-employee plan formulary status, non-resident 503A board tiers, and local brick-and-mortar medspa vs online flat-rate savings.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "url": "https://losingweightrx.com/datasets/us-50-state-telehealth-glp1-access-medicaid-matrix-2026/",
+  "identifier": "https://doi.org/10.5281/zenodo.24139340",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "1.0.0",
+  "datePublished": "2026-11-11",
+  "dateModified": "2026-11-11",
+  "creator": {
+    "@type": "sc:Organization",
+    "name": "Losing Weight RX Pharmacoeconomics & Consumer Audit Desk",
+    "parentOrganization": {
+      "@type": "sc:Organization",
+      "name": "Losing Weight RX LLC"
+    },
+    "url": "https://losingweightrx.com/editorial-standards"
+  },
+  "about": [
+    {
+      "@id": "https://www.wikidata.org/wiki/Q35657"
+    },
+    {
+      "@id": "https://www.wikidata.org/wiki/Q1145365"
+    },
+    {
+      "@id": "https://www.wikidata.org/wiki/Q46994"
+    }
+  ],
+  "sameAs": [
+    "https://huggingface.co/datasets/losing-weight-rx/us-50-state-telehealth-glp1-access-medicaid-matrix-2026",
+    "https://github.com/losingweightrx-research/us-50-state-telehealth-glp1-access-medicaid-matrix-2026",
+    "https://doi.org/10.5281/zenodo.24139340"
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "state_access_matrix.csv",
+      "name": "state_access_matrix.csv",
+      "contentUrl": "https://losingweightrx.com/datasets/us-50-state-telehealth-glp1-access-medicaid-matrix-2026/state_access_matrix.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "10740 B",
+      "sha256": "94187651a3472eb3a0a172f3185e66a2c08c304f44255c14cac452861437a98b"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "subsets/medicaid_obesity_covered_states.csv",
+      "name": "subsets/medicaid_obesity_covered_states.csv",
+      "contentUrl": "https://losingweightrx.com/datasets/us-50-state-telehealth-glp1-access-medicaid-matrix-2026/subsets/medicaid_obesity_covered_states.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "3845 B",
+      "sha256": "cc812166fda466f6e0ff5de933b107ba806282bc7a8eea1c209a0534aa5f1c58"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "subsets/async_telehealth_permitted_states.csv",
+      "name": "subsets/async_telehealth_permitted_states.csv",
+      "contentUrl": "https://losingweightrx.com/datasets/us-50-state-telehealth-glp1-access-medicaid-matrix-2026/subsets/async_telehealth_permitted_states.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "9742 B",
+      "sha256": "3dde0ec9b4bdf878813677e2fa3d4453596b70dc3060ced6ba25dcf336e626c9"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "subsets/strict_sterile_compounding_board_states.csv",
+      "name": "subsets/strict_sterile_compounding_board_states.csv",
+      "contentUrl": "https://losingweightrx.com/datasets/us-50-state-telehealth-glp1-access-medicaid-matrix-2026/subsets/strict_sterile_compounding_board_states.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "4458 B",
+      "sha256": "6e769d763639406d8cd371e8a590c77975ba3c4c7f7c51d838d0fc681f8d4a6b"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "main",
+      "name": "main",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "main/jurisdiction_record_id",
+          "name": "jurisdiction_record_id",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "jurisdiction_record_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/state_name",
+          "name": "state_name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "state_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/state_postal_code",
+          "name": "state_postal_code",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "state_postal_code"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/census_region",
+          "name": "census_region",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "census_region"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/telehealth_initial_exam_modality",
+          "name": "telehealth_initial_exam_modality",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "telehealth_initial_exam_modality"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/async_intake_permitted_boolean",
+          "name": "async_intake_permitted_boolean",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "async_intake_permitted_boolean"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/medicaid_adult_obesity_glp1_covered_boolean",
+          "name": "medicaid_adult_obesity_glp1_covered_boolean",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "medicaid_adult_obesity_glp1_covered_boolean"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/state_employee_plan_glp1_active_boolean",
+          "name": "state_employee_plan_glp1_active_boolean",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "state_employee_plan_glp1_active_boolean"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/nonresident_503a_sterile_board_tier",
+          "name": "nonresident_503a_sterile_board_tier",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "nonresident_503a_sterile_board_tier"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/adult_obesity_prevalence_pct",
+          "name": "adult_obesity_prevalence_pct",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "adult_obesity_prevalence_pct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/local_bariatric_medspa_sema_median_usd",
+          "name": "local_bariatric_medspa_sema_median_usd",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "local_bariatric_medspa_sema_median_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/local_bariatric_medspa_tirz_median_usd",
+          "name": "local_bariatric_medspa_tirz_median_usd",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "local_bariatric_medspa_tirz_median_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/verified_online_flat_sema_usd",
+          "name": "verified_online_flat_sema_usd",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "verified_online_flat_sema_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/verified_online_flat_tirz_usd",
+          "name": "verified_online_flat_tirz_usd",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "verified_online_flat_tirz_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/annual_household_sema_savings_usd",
+          "name": "annual_household_sema_savings_usd",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "annual_household_sema_savings_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/annual_household_tirz_savings_usd",
+          "name": "annual_household_tirz_savings_usd",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "annual_household_tirz_savings_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/prior_auth_commercial_denial_rate_est_pct",
+          "name": "prior_auth_commercial_denial_rate_est_pct",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "prior_auth_commercial_denial_rate_est_pct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/cold_chain_express_transit_days",
+          "name": "cold_chain_express_transit_days",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "cold_chain_express_transit_days"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/state_access_equity_score_100",
+          "name": "state_access_equity_score_100",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "state_access_equity_score_100"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/official_policy_reference_url",
+          "name": "official_policy_reference_url",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "state_access_matrix.csv"
+            },
+            "extract": {
+              "column": "official_policy_reference_url"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

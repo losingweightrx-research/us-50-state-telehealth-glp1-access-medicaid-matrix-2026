@@ -1,0 +1,402 @@
+{
+  "profile": "tabular-data-package",
+  "name": "us-50-state-telehealth-glp1-access-medicaid-matrix-2026",
+  "title": "US 50-State + DC Telehealth Modality, Medicaid GLP-1 Coverage & Local Clinic Cost Matrix (2026)",
+  "description": "51-jurisdiction US regulatory and geographic price-disparity matrix (50 states plus Washington, DC) indexing state telehealth modality rules (asynchronous vs synchronous video), Medicaid adult obesity GLP-1 coverage, state-employee plan formulary status, non-resident 503A board tiers, and local brick-and-mortar medspa vs online flat-rate savings.",
+  "homepage": "https://losingweightrx.com/datasets/us-50-state-telehealth-glp1-access-medicaid-matrix-2026/",
+  "version": "1.0.0",
+  "created": "2026-11-11",
+  "id": "https://doi.org/10.5281/zenodo.24139340",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Losing Weight RX Pharmacoeconomics & Consumer Audit Desk",
+      "role": "author",
+      "path": "https://losingweightrx.com/editorial-standards"
+    }
+  ],
+  "resources": [
+    {
+      "name": "main",
+      "path": "state_access_matrix.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 10740,
+      "hash": "sha256:94187651a3472eb3a0a172f3185e66a2c08c304f44255c14cac452861437a98b",
+      "schema": {
+        "fields": [
+          {
+            "name": "jurisdiction_record_id",
+            "type": "string"
+          },
+          {
+            "name": "state_name",
+            "type": "string"
+          },
+          {
+            "name": "state_postal_code",
+            "type": "string"
+          },
+          {
+            "name": "census_region",
+            "type": "string"
+          },
+          {
+            "name": "telehealth_initial_exam_modality",
+            "type": "string"
+          },
+          {
+            "name": "async_intake_permitted_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "medicaid_adult_obesity_glp1_covered_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "state_employee_plan_glp1_active_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "nonresident_503a_sterile_board_tier",
+            "type": "string"
+          },
+          {
+            "name": "adult_obesity_prevalence_pct",
+            "type": "number"
+          },
+          {
+            "name": "local_bariatric_medspa_sema_median_usd",
+            "type": "number"
+          },
+          {
+            "name": "local_bariatric_medspa_tirz_median_usd",
+            "type": "number"
+          },
+          {
+            "name": "verified_online_flat_sema_usd",
+            "type": "number"
+          },
+          {
+            "name": "verified_online_flat_tirz_usd",
+            "type": "number"
+          },
+          {
+            "name": "annual_household_sema_savings_usd",
+            "type": "number"
+          },
+          {
+            "name": "annual_household_tirz_savings_usd",
+            "type": "number"
+          },
+          {
+            "name": "prior_auth_commercial_denial_rate_est_pct",
+            "type": "number"
+          },
+          {
+            "name": "cold_chain_express_transit_days",
+            "type": "integer"
+          },
+          {
+            "name": "state_access_equity_score_100",
+            "type": "integer"
+          },
+          {
+            "name": "official_policy_reference_url",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "medicaid-obesity-covered-states",
+      "path": "subsets/medicaid_obesity_covered_states.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 3845,
+      "hash": "sha256:cc812166fda466f6e0ff5de933b107ba806282bc7a8eea1c209a0534aa5f1c58",
+      "schema": {
+        "fields": [
+          {
+            "name": "jurisdiction_record_id",
+            "type": "string"
+          },
+          {
+            "name": "state_name",
+            "type": "string"
+          },
+          {
+            "name": "state_postal_code",
+            "type": "string"
+          },
+          {
+            "name": "census_region",
+            "type": "string"
+          },
+          {
+            "name": "telehealth_initial_exam_modality",
+            "type": "string"
+          },
+          {
+            "name": "async_intake_permitted_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "medicaid_adult_obesity_glp1_covered_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "state_employee_plan_glp1_active_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "nonresident_503a_sterile_board_tier",
+            "type": "string"
+          },
+          {
+            "name": "adult_obesity_prevalence_pct",
+            "type": "number"
+          },
+          {
+            "name": "local_bariatric_medspa_sema_median_usd",
+            "type": "number"
+          },
+          {
+            "name": "local_bariatric_medspa_tirz_median_usd",
+            "type": "number"
+          },
+          {
+            "name": "verified_online_flat_sema_usd",
+            "type": "number"
+          },
+          {
+            "name": "verified_online_flat_tirz_usd",
+            "type": "number"
+          },
+          {
+            "name": "annual_household_sema_savings_usd",
+            "type": "number"
+          },
+          {
+            "name": "annual_household_tirz_savings_usd",
+            "type": "number"
+          },
+          {
+            "name": "prior_auth_commercial_denial_rate_est_pct",
+            "type": "number"
+          },
+          {
+            "name": "cold_chain_express_transit_days",
+            "type": "integer"
+          },
+          {
+            "name": "state_access_equity_score_100",
+            "type": "integer"
+          },
+          {
+            "name": "official_policy_reference_url",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "async-telehealth-permitted-states",
+      "path": "subsets/async_telehealth_permitted_states.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 9742,
+      "hash": "sha256:3dde0ec9b4bdf878813677e2fa3d4453596b70dc3060ced6ba25dcf336e626c9",
+      "schema": {
+        "fields": [
+          {
+            "name": "jurisdiction_record_id",
+            "type": "string"
+          },
+          {
+            "name": "state_name",
+            "type": "string"
+          },
+          {
+            "name": "state_postal_code",
+            "type": "string"
+          },
+          {
+            "name": "census_region",
+            "type": "string"
+          },
+          {
+            "name": "telehealth_initial_exam_modality",
+            "type": "string"
+          },
+          {
+            "name": "async_intake_permitted_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "medicaid_adult_obesity_glp1_covered_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "state_employee_plan_glp1_active_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "nonresident_503a_sterile_board_tier",
+            "type": "string"
+          },
+          {
+            "name": "adult_obesity_prevalence_pct",
+            "type": "number"
+          },
+          {
+            "name": "local_bariatric_medspa_sema_median_usd",
+            "type": "number"
+          },
+          {
+            "name": "local_bariatric_medspa_tirz_median_usd",
+            "type": "number"
+          },
+          {
+            "name": "verified_online_flat_sema_usd",
+            "type": "number"
+          },
+          {
+            "name": "verified_online_flat_tirz_usd",
+            "type": "number"
+          },
+          {
+            "name": "annual_household_sema_savings_usd",
+            "type": "number"
+          },
+          {
+            "name": "annual_household_tirz_savings_usd",
+            "type": "number"
+          },
+          {
+            "name": "prior_auth_commercial_denial_rate_est_pct",
+            "type": "number"
+          },
+          {
+            "name": "cold_chain_express_transit_days",
+            "type": "integer"
+          },
+          {
+            "name": "state_access_equity_score_100",
+            "type": "integer"
+          },
+          {
+            "name": "official_policy_reference_url",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "strict-sterile-compounding-board-states",
+      "path": "subsets/strict_sterile_compounding_board_states.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 4458,
+      "hash": "sha256:6e769d763639406d8cd371e8a590c77975ba3c4c7f7c51d838d0fc681f8d4a6b",
+      "schema": {
+        "fields": [
+          {
+            "name": "jurisdiction_record_id",
+            "type": "string"
+          },
+          {
+            "name": "state_name",
+            "type": "string"
+          },
+          {
+            "name": "state_postal_code",
+            "type": "string"
+          },
+          {
+            "name": "census_region",
+            "type": "string"
+          },
+          {
+            "name": "telehealth_initial_exam_modality",
+            "type": "string"
+          },
+          {
+            "name": "async_intake_permitted_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "medicaid_adult_obesity_glp1_covered_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "state_employee_plan_glp1_active_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "nonresident_503a_sterile_board_tier",
+            "type": "string"
+          },
+          {
+            "name": "adult_obesity_prevalence_pct",
+            "type": "number"
+          },
+          {
+            "name": "local_bariatric_medspa_sema_median_usd",
+            "type": "number"
+          },
+          {
+            "name": "local_bariatric_medspa_tirz_median_usd",
+            "type": "number"
+          },
+          {
+            "name": "verified_online_flat_sema_usd",
+            "type": "number"
+          },
+          {
+            "name": "verified_online_flat_tirz_usd",
+            "type": "number"
+          },
+          {
+            "name": "annual_household_sema_savings_usd",
+            "type": "number"
+          },
+          {
+            "name": "annual_household_tirz_savings_usd",
+            "type": "number"
+          },
+          {
+            "name": "prior_auth_commercial_denial_rate_est_pct",
+            "type": "number"
+          },
+          {
+            "name": "cold_chain_express_transit_days",
+            "type": "integer"
+          },
+          {
+            "name": "state_access_equity_score_100",
+            "type": "integer"
+          },
+          {
+            "name": "official_policy_reference_url",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
